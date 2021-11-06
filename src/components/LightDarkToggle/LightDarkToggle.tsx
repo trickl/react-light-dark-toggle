@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { CSSProperties } from '@mui/styled-engine';
 import cn from 'classnames';
 import React, { FunctionComponent, HTMLProps, useCallback } from 'react';
 
@@ -45,12 +46,16 @@ const SunMoonButton = styled.button(() => ({
 const DefaultMoonIcon = () => <img src={MoonIconSrc} alt="dark" />;
 const DefaultSunIcon = () => <img src={SunIconSrc} alt="light" />;
 
+const iconClasses: CSSProperties = {
+  width: '1.5em',
+  height: '1.5em',
+  transitionProperty: 'transform background',
+  transitionDuration: '400ms',
+};
+
 const MovableSunIconContainer = styled.div(() => ({
   [`&.${classes.sun}`]: {
-    width: '1.5em',
-    height: '1.5em',
-    transitionProperty: 'transform background',
-    transitionDuration: '400ms',
+    ...iconClasses,
   },
 
   [`&.${classes.showSun}`]: {
@@ -64,10 +69,7 @@ const MovableSunIconContainer = styled.div(() => ({
 
 const MovableMoonIconContainer = styled.div(() => ({
   [`&.${classes.moon}`]: {
-    width: '1.5em',
-    height: '1.5em',
-    transitionProperty: 'transform',
-    transitionDuration: '400ms',
+    ...iconClasses,
   },
   [`&.${classes.showMoon}`]: {
     transform: 'translateY(0)',
