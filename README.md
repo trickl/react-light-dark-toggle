@@ -1,5 +1,5 @@
 # React Light Dark Toggle
-[![Build Status][![Build Status](https://app.travis-ci.com/trickl/react-light-dark-toggle.svg?branch=main)](https://app.travis-ci.com/trickl/react-light-dark-toggle)
+[![Build Status](https://app.travis-ci.com/trickl/react-light-dark-toggle.svg?branch=main)](https://app.travis-ci.com/trickl/react-light-dark-toggle)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b5f92597060361dda169/maintainability)](https://codeclimate.com/github/trickl/react-light-dark-toggle/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b5f92597060361dda169/test_coverage)](https://codeclimate.com/github/trickl/react-light-dark-toggle/test_coverage)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
