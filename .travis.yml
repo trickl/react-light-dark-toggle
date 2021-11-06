@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - lts/*
+jobs:
+  include:
+     # Other jobs
+
+     # 👇 Adds Chromatic as a job
+   - name: 'Publish to Chromatic'
+     if: (branch != master)
+     script: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}
+   - name: 'Publish to Chromatic On Main'
+     if: (branch = master)
+     script: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --auto-accept-changes
+
+deploy:
+  provider: npm
+  email: writetotimgee@gmail.com
+  api_key: ${NPM_AUTH_TOKEN}
+  on:
+    branch: master
+    tags: true

@@ -1,0 +1,122 @@
+{
+  "name": "react-light-dark-toggle",
+  "version": "1.0.0",
+  "description": "Just the drag handles...React icons indicating a surface is draggable",
+  "repository": "https://github.com/trickl/react-light-dark-toggle",
+  "author": {
+    "name": "Tim Gee",
+    "url": "https://github.com/trickl"
+  },
+  "bugs": {
+    "url": "https://github.com/trickl/react-light-dark-toggle/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-component",
+    "icon",
+    "surface",
+    "material",
+    "draggable",
+    "ui"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-proposal-decorators": "^7.16.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.16.0",
+    "@babel/plugin-proposal-function-sent": "^7.16.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.16.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@babel/register": "^7.16.0",
+    "@babel/runtime": "^7.16.0",
+    "@mui/icons-material": "^5.0.5",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/addons": "^6.3.12",
+    "@storybook/react": "^6.3.12",
+    "@storybook/theming": "^6.3.12",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0",
+    "chromatic": "^6.0.5",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-find-rules": "^3.6.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-tsc": "^2.0.0",
+    "husky": "^7.0.4",
+    "install-peers-cli": "^2.2.0",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.2.6",
+    "node-dev": "^7.1.0",
+    "prettier": "^2.4.1",
+    "require-dir": "^1.2.0",
+    "rollup": "^2.58.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "storybook-dark-mode": "^1.0.8",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@types/lodash": "^4.14.176",
+    "@types/react": "^17.0.33",
+    "classnames": "^2.3.1"
+  },
+  "peerDependencies": {
+    "prop-types": ">=15.7.2",
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "prepare": "install-peers",
+    "build": "rollup -c",
+    "test": "jest",
+    "lint": "npm run eslint",
+    "eslint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
+    "eslint:fix": "eslint --ext .js,.jsx,.ts,.tsx src --color --fix",
+    "eslint-rules": "eslint-find-rules .eslintrc.json --current",
+    "prettier": "prettier --single-quote --write 'src/**/*.{jsx,js,ts,tsx,scss}'",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
