@@ -1,7 +1,7 @@
 # React Light Dark Toggle
 [![Build Status](https://app.travis-ci.com/trickl/react-light-dark-toggle.svg?branch=main)](https://app.travis-ci.com/trickl/react-light-dark-toggle)
-[![Maintainability](https://api.codeclimate.com/v1/badges/b5f92597060361dda169/maintainability)](https://codeclimate.com/github/trickl/react-light-dark-toggle/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/b5f92597060361dda169/test_coverage)](https://codeclimate.com/github/trickl/react-light-dark-toggle/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/6996a07af2a8fac4294c/maintainability)](https://codeclimate.com/github/trickl/react-light-dark-toggle/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/6996a07af2a8fac4294c/test_coverage)](https://codeclimate.com/github/trickl/react-light-dark-toggle/test_coverage)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A customizable React switch for changing between light and dark mode.
@@ -12,4 +12,4 @@ npm i react-light-dark-toggle
 ```
 
 ## Usage and Demo
-[Visit The Storybook Page](https://master--617ed0e7e88637004aa2ac53.chromatic.com/?path=/story/snowfox-controls-uncontrolledtransferlist--three-way-transfer-list)
+[Visit The Storybook Page](https://www.chromatic.com/component?appId=6186a9e3a34691003aa4de0c&name=LightDarkToggle&buildNumber=2&componentInspectorKey=6186ab9e070abd003ac70a89-1200-interactive-true&historyLengthAtIndex=11&distanceToMoveBack=-1)
