@@ -1,17 +1,15 @@
 import styled from '@emotion/styled';
 import { CSSProperties } from '@mui/styled-engine';
 import cn from 'classnames';
-import React, { FunctionComponent, HTMLProps, useCallback } from 'react';
+import { FunctionComponent, HTMLProps, useCallback } from 'react';
 
 import MoonIconSrc from '../../assets/moon-svgrepo-com.svg';
 import SunIconSrc from '../../assets/sun-svgrepo-com.svg';
+import { LightDarkButton } from './LightDarkButton';
 
 const PREFIX = 'LightDarkToggle';
 
 const classes = {
-  button: `${PREFIX}-button`,
-  light: `${PREFIX}-light`,
-  dark: `${PREFIX}-dark`,
   sun: `${PREFIX}-sun`,
   moon: `${PREFIX}-moon`,
   showSun: `${PREFIX}-show-sun`,
@@ -19,29 +17,6 @@ const classes = {
   showMoon: `${PREFIX}-show-moon`,
   hideMoon: `${PREFIX}-hide-moon`,
 };
-
-const SunMoonButton = styled.button(() => ({
-  [`&.${classes.light}`]: {
-    background: 'aliceblue',
-    border: '2px solid white',
-  },
-  [`&.${classes.dark}`]: {
-    background: 'slategrey',
-    border: '2px solid white',
-  },
-  [`&.${classes.button}`]: {
-    borderRadius: '2em',
-    cursor: 'pointer',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    overflow: 'hidden',
-    padding: '0.2em',
-    position: 'relative',
-    width: '4em',
-    height: '2em',
-  },
-}));
 
 const DefaultMoonIcon = () => <img src={MoonIconSrc} alt="dark" />;
 const DefaultSunIcon = () => <img src={SunIconSrc} alt="light" />;
@@ -85,6 +60,11 @@ export interface LightDarkToggleProps
   isLight: boolean;
   sunIconComponent?: FunctionComponent<Record<string, never>>;
   moonIconComponent?: FunctionComponent<Record<string, never>>;
+  lightBackgroundColor?: string;
+  darkBackgroundColor?: string;
+  lightBorderColor?: string;
+  darkBorderColor?: string;
+  borderWidth?: string;
   onToggle?: (isLight: boolean) => void;
 }
 
@@ -95,6 +75,11 @@ export const LightDarkToggle: FunctionComponent<LightDarkToggleProps> = ({
   moonIconComponent: MoonIcon = DefaultMoonIcon,
   onToggle,
   type,
+  lightBackgroundColor = 'aliceblue',
+  darkBackgroundColor = 'dimgrey',
+  lightBorderColor = 'white',
+  darkBorderColor = 'white',
+  borderWidth = '2px',
   ...otherProps
 }) => {
   const handleClick = useCallback(
@@ -102,12 +87,13 @@ export const LightDarkToggle: FunctionComponent<LightDarkToggleProps> = ({
     [isLight, onToggle]
   );
   return (
-    <SunMoonButton
-      className={cn(
-        classes.button,
-        isLight ? classes.light : classes.dark,
-        className
-      )}
+    <LightDarkButton
+      isLight={isLight}
+      lightBackgroundColor={lightBackgroundColor}
+      darkBackgroundColor={darkBackgroundColor}
+      lightBorderColor={lightBorderColor}
+      darkBorderColor={darkBorderColor}
+      borderWidth={borderWidth}
       onClick={handleClick}
       type="button"
       {...otherProps}
@@ -125,6 +111,6 @@ export const LightDarkToggle: FunctionComponent<LightDarkToggleProps> = ({
       >
         <MoonIcon />
       </MovableMoonIconContainer>
-    </SunMoonButton>
+    </LightDarkButton>
   );
 };
