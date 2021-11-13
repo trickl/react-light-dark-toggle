@@ -1,7 +1,7 @@
 {
   "name": "react-light-dark-toggle",
-  "version": "1.0.1",
-  "description": "Just the drag handles...React icons indicating a surface is draggable",
+  "version": "1.0.2",
+  "description": "A customizable React toggle for changing between light and dark mode",
   "repository": "https://github.com/trickl/react-light-dark-toggle",
   "author": {
     "name": "Tim Gee",
