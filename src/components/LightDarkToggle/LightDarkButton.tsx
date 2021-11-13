@@ -10,28 +10,32 @@ const classes = {
   dark: `${PREFIX}-dark`,
 };
 
-export interface LightDarkButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface LightDarkButtonOwnProps {
   isLight?: boolean;
   lightBackgroundColor?: string;
   darkBackgroundColor?: string;
   lightBorderColor?: string;
   darkBorderColor?: string;
-  borderWidth?: string;
+  buttonComponent?:
+    | string
+    | FunctionComponent<ButtonHTMLAttributes<HTMLButtonElement>>;
 }
+
+export type LightDarkButtonProps = LightDarkButtonOwnProps &
+  ButtonHTMLAttributes<HTMLButtonElement>;
 
 const UnstyledLightDarkButton: FunctionComponent<LightDarkButtonProps> = ({
   isLight,
   className,
+  buttonComponent: ButtonComponent = 'button',
   lightBackgroundColor,
   darkBackgroundColor,
   lightBorderColor,
   darkBorderColor,
-  borderWidth,
   ...otherProps
 }) => {
   return (
-    <button
+    <ButtonComponent
       className={cn(
         classes.button,
         isLight ? classes.light : classes.dark,
@@ -52,17 +56,19 @@ export const LightDarkButton = styled(UnstyledLightDarkButton)((props) => ({
     border: props.darkBorderColor,
   },
   [`&.${classes.button}`]: {
-    borderWidth: props.borderWidth,
+    borderWidth: '2px',
     borderStyle: 'solid',
     borderRadius: '2em',
     cursor: 'pointer',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     overflow: 'hidden',
-    padding: '0.2em',
     position: 'relative',
     width: '4em',
     height: '2em',
+    fontSize: '16px',
+    transition: 'background-color',
+    transitionDuration: '400ms',
   },
 }));
