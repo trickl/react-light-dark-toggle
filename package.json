@@ -1,6 +1,6 @@
 {
   "name": "react-light-dark-toggle",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A customizable React toggle for changing between light and dark mode",
   "repository": "https://github.com/trickl/react-light-dark-toggle",
   "author": {
@@ -41,6 +41,7 @@
     "@babel/runtime": "^7.16.0",
     "@mui/icons-material": "^5.0.5",
     "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",

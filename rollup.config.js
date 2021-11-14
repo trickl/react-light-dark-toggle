@@ -1,7 +1,7 @@
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import svg from 'rollup-plugin-svg'
+import image from '@rollup/plugin-image';
 import typescript from 'rollup-plugin-typescript2';
 
 import packageJson from './package.json';
@@ -21,7 +21,7 @@ const rollupConfig = {
       sourcemap: true,
     },
   ],
-  plugins: [peerDepsExternal(), resolve(), commonjs(), typescript(), svg()],
+  plugins: [peerDepsExternal(), resolve(), commonjs(), typescript(), image()],
 };
 
 export default rollupConfig;
