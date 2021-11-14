@@ -2,7 +2,7 @@ import addons from '@storybook/addons';
 import { Meta, Story } from '@storybook/react';
 import { useDarkMode } from 'storybook-dark-mode';
 
-import { GoogldFontsListDarkToggleProps } from './GoogleFontsLightDarkToggleProps';
+import { googleFontsListDarkToggleProps } from './GoogleFontsLightDarkToggle';
 import { LightDarkToggle, LightDarkToggleProps } from './LightDarkToggle';
 
 const channel = addons.getChannel();
@@ -26,4 +26,4 @@ export const FullScreen = Template.bind({});
 FullScreen.args = { style: { fontSize: '24vw' } };
 
 export const GoogleFonts = Template.bind({});
-GoogleFonts.args = GoogldFontsListDarkToggleProps;
+GoogleFonts.args = googleFontsListDarkToggleProps;

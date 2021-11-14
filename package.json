@@ -1,6 +1,6 @@
 {
   "name": "react-light-dark-toggle",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A customizable React toggle for changing between light and dark mode",
   "repository": "https://github.com/trickl/react-light-dark-toggle",
   "author": {
@@ -78,6 +78,7 @@
     "require-dir": "^1.2.0",
     "rollup": "^2.58.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-typescript2": "^0.30.0",
     "storybook-dark-mode": "^1.0.8",
     "ts-jest": "^27.0.7",

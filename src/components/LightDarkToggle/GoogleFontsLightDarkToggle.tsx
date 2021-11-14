@@ -1,8 +1,8 @@
 import MoonIconSrc from '../../assets/inside-circle.svg';
 import SunIconSrc from '../../assets/outside-rays.svg';
-import { LightDarkToggleProps } from './LightDarkToggle';
+import { LightDarkToggle, LightDarkToggleProps } from './LightDarkToggle';
 
-export const GoogldFontsListDarkToggleProps: LightDarkToggleProps = {
+export const googleFontsListDarkToggleProps: LightDarkToggleProps = {
   moonIconComponent: () => <img src={MoonIconSrc} alt="dark" />,
   sunIconComponent: () => <img src={SunIconSrc} alt="light" />,
   showSunTransform: 'rotate(0)',
@@ -22,3 +22,7 @@ export const GoogldFontsListDarkToggleProps: LightDarkToggleProps = {
     width: '2em',
   },
 };
+
+export const GoogleFontsListDarkToggle = (
+  <LightDarkToggle {...googleFontsListDarkToggleProps} />
+);
