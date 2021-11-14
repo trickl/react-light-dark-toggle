@@ -12,4 +12,4 @@ npm i react-light-dark-toggle
 ```
 
 ## Usage and Demo
-[Visit The Storybook Page](https://www.chromatic.com/component?appId=6186a9e3a34691003aa4de0c&name=LightDarkToggle&buildNumber=2&componentInspectorKey=6186ab9e070abd003ac70a89-1200-interactive-true&historyLengthAtIndex=11&distanceToMoveBack=-1)
+[Visit The Storybook Page](https://www.chromatic.com/component?buildNumber=11&historyLengthAtIndex=15&distanceToMoveBack=-4&appId=6186a9e3a34691003aa4de0c&name=LightDarkToggle&specName=Full%20Screen&componentInspectorKey=619009abfdbe08003a1eeeca-1200-interactive-true)
