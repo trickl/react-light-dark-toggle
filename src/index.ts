@@ -1,4 +1,4 @@
-import { GoogleFontsListDarkToggle } from 'components/LightDarkToggle/GoogleFontsLightDarkToggle';
+import { GoogleFontsLightDarkToggle } from 'components/LightDarkToggle/GoogleFontsLightDarkToggle';
 import { LightDarkToggle } from 'components/LightDarkToggle/LightDarkToggle';
 
-export { GoogleFontsListDarkToggle, LightDarkToggle };
+export { GoogleFontsLightDarkToggle, LightDarkToggle };

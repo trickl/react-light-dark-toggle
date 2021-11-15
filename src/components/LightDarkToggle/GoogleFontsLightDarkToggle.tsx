@@ -1,8 +1,10 @@
+import { FunctionComponent } from 'react';
+
 import MoonIconSrc from '../../assets/inside-circle.svg';
 import SunIconSrc from '../../assets/outside-rays.svg';
 import { LightDarkToggle, LightDarkToggleProps } from './LightDarkToggle';
 
-export const googleFontsListDarkToggleProps: LightDarkToggleProps = {
+export const googleFontsLightDarkToggleProps: LightDarkToggleProps = {
   moonIconComponent: () => <img src={MoonIconSrc} alt="dark" />,
   sunIconComponent: () => <img src={SunIconSrc} alt="light" />,
   showSunTransform: 'rotate(0)',
@@ -23,6 +25,11 @@ export const googleFontsListDarkToggleProps: LightDarkToggleProps = {
   },
 };
 
-export const GoogleFontsListDarkToggle = (
-  <LightDarkToggle {...googleFontsListDarkToggleProps} />
-);
+export const GoogleFontsLightDarkToggle: FunctionComponent<LightDarkToggleProps> =
+  ({ style, ...otherProps }) => (
+    <LightDarkToggle
+      {...googleFontsLightDarkToggleProps}
+      style={{ ...googleFontsLightDarkToggleProps.style, ...style }}
+      {...otherProps}
+    />
+  );

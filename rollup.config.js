@@ -1,7 +1,7 @@
 import commonjs from '@rollup/plugin-commonjs';
+import image from '@rollup/plugin-image';
 import resolve from '@rollup/plugin-node-resolve';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import image from '@rollup/plugin-image';
 import typescript from 'rollup-plugin-typescript2';
 
 import packageJson from './package.json';

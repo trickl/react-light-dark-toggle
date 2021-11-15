@@ -2,17 +2,18 @@ import addons from '@storybook/addons';
 import { Meta, Story } from '@storybook/react';
 import { useDarkMode } from 'storybook-dark-mode';
 
-import { LightDarkToggle, LightDarkToggleProps } from './LightDarkToggle';
+import { GoogleFontsLightDarkToggle } from './GoogleFontsLightDarkToggle';
+import { LightDarkToggleProps } from './LightDarkToggle';
 
 const channel = addons.getChannel();
 
 export default {
-  title: 'LightDarkToggle',
-  component: LightDarkToggle,
+  title: 'GoogleFontsLightDarkToggle',
+  component: GoogleFontsLightDarkToggle,
 } as Meta;
 
 const Template: Story<LightDarkToggleProps> = (args) => (
-  <LightDarkToggle
+  <GoogleFontsLightDarkToggle
     {...args}
     isLight={!useDarkMode()}
     onToggle={(isLight) => channel.emit('DARK_MODE', !isLight)}
