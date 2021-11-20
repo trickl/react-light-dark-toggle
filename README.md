@@ -8,13 +8,13 @@ A customizable React switch for changing between light and dark mode.
 
 ## Examples
 
-# Regular
+#### Regular
 
-[![RegularExample](https://github.com/trickl/react-light-dark-toggle/blob/master/gifs/LightDarkToggleRegular.gif)
+![RegularExample](https://github.com/trickl/react-light-dark-toggle/blob/master/gifs/LightDarkToggleRegular.gif)
 
-# Styled Like the Google Fonts Toggle
+#### Styled Like the Google Fonts Toggle
 
-[![GoogleFontExample](https://github.com/trickl/react-light-dark-toggle/blob/master/gifs/GoogleFontsStyling.gif)
+![GoogleFontExample](https://github.com/trickl/react-light-dark-toggle/blob/master/gifs/GoogleFontsStyling.gif)
 
 ## Install
 ```bash
