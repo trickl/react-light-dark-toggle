@@ -1,6 +1,6 @@
 {
   "name": "react-light-dark-toggle",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A customizable React toggle for changing between light and dark mode",
   "repository": "https://github.com/trickl/react-light-dark-toggle",
   "author": {
@@ -71,7 +71,6 @@
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-tsc": "^2.0.0",
     "husky": "^7.0.4",
-    "install-peers-cli": "^2.2.0",
     "jest": "^27.3.1",
     "lint-staged": "^11.2.6",
     "node-dev": "^7.1.0",
@@ -84,7 +83,10 @@
     "storybook-dark-mode": "^1.0.8",
     "ts-jest": "^27.0.7",
     "ts-node": "^10.4.0",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "prop-types": ">=15.7.2",
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
   },
   "dependencies": {
     "@emotion/react": "^11.5.0",
@@ -93,11 +95,6 @@
     "@types/react": "^17.0.33",
     "classnames": "^2.3.1"
   },
-  "peerDependencies": {
-    "prop-types": ">=15.7.2",
-    "react": ">=17.0.2",
-    "react-dom": ">=17.0.2"
-  },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write",
@@ -105,7 +102,6 @@
     ]
   },
   "scripts": {
-    "prepare": "install-peers",
     "build": "rollup -c",
     "test": "jest",
     "lint": "npm run eslint",
