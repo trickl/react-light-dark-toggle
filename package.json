@@ -14,10 +14,11 @@
   "keywords": [
     "react",
     "react-component",
-    "icon",
-    "surface",
-    "material",
-    "draggable",
+    "light",
+    "dark",
+    "toggle",
+    "mode",
+    "theme",
     "ui"
   ],
   "main": "dist/index.js",
