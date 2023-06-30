@@ -25,11 +25,12 @@ export const googleFontsLightDarkToggleProps: LightDarkToggleProps = {
   },
 };
 
-export const GoogleFontsLightDarkToggle: FunctionComponent<LightDarkToggleProps> =
-  ({ style, ...otherProps }) => (
-    <LightDarkToggle
-      {...googleFontsLightDarkToggleProps}
-      style={{ ...googleFontsLightDarkToggleProps.style, ...style }}
-      {...otherProps}
-    />
-  );
+export const GoogleFontsLightDarkToggle: FunctionComponent<
+  LightDarkToggleProps
+> = ({ style, ...otherProps }: LightDarkToggleProps) => (
+  <LightDarkToggle
+    {...googleFontsLightDarkToggleProps}
+    style={{ ...googleFontsLightDarkToggleProps.style, ...style }}
+    {...otherProps}
+  />
+);

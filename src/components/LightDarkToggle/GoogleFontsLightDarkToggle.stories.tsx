@@ -1,5 +1,5 @@
-import addons from '@storybook/addons';
-import { Meta, Story } from '@storybook/react';
+import { addons } from '@storybook/addons';
+import { Meta, StoryFn } from '@storybook/react';
 import { useDarkMode } from 'storybook-dark-mode';
 
 import { GoogleFontsLightDarkToggle } from './GoogleFontsLightDarkToggle';
@@ -12,7 +12,7 @@ export default {
   component: GoogleFontsLightDarkToggle,
 } as Meta;
 
-const Template: Story<LightDarkToggleProps> = (args) => (
+const Template: StoryFn<LightDarkToggleProps> = (args) => (
   <GoogleFontsLightDarkToggle
     {...args}
     isLight={!useDarkMode()}

@@ -1,26 +1,21 @@
 const path = require('path');
-
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-actions',
-    '@storybook/addon-essentials',
-    'storybook-dark-mode',
-  ],
+  addons: ['@storybook/addon-links', '@storybook/addon-actions', '@storybook/addon-essentials', 'storybook-dark-mode'],
   typescript: {
     check: false,
     checkOptions: {},
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
-      propFilter: (prop) => (prop.parent ?  !/node_modules/.test(prop.parent.fileName) : true),
-  }},
-  webpackFinal: async (config) => {
+      propFilter: prop => prop.parent ? !/node_modules/.test(prop.parent.fileName) : true
+    }
+  },
+  webpackFinal: async config => {
     config.resolve.alias = {
       ...config.resolve?.alias,
       'components': path.resolve(__dirname, '../src/components'),
-      'assets': path.resolve(__dirname, '../src/assets'),
+      'assets': path.resolve(__dirname, '../src/assets')
     };
 
     // https://github.com/mui-org/material-ui/issues/24282
@@ -30,4 +25,11 @@ module.exports = {
     delete config.resolve.alias['@emotion/core'];
     return config;
   },
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {}
+  },
+  docs: {
+    autodocs: true
+  }
 };

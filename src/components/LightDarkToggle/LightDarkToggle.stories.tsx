@@ -1,5 +1,5 @@
-import addons from '@storybook/addons';
-import { Meta, Story } from '@storybook/react';
+import { addons } from '@storybook/addons';
+import { Meta, StoryFn } from '@storybook/react';
 import { useDarkMode } from 'storybook-dark-mode';
 
 import { LightDarkToggle, LightDarkToggleProps } from './LightDarkToggle';
@@ -11,7 +11,7 @@ export default {
   component: LightDarkToggle,
 } as Meta;
 
-const Template: Story<LightDarkToggleProps> = (args) => (
+const Template: StoryFn<LightDarkToggleProps> = (args) => (
   <LightDarkToggle
     {...args}
     isLight={!useDarkMode()}

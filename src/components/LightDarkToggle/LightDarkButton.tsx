@@ -12,9 +12,13 @@ const classes = {
 
 export interface LightDarkButtonOwnProps {
   isLight?: boolean;
+  /** The color of the light background */
   lightBackgroundColor?: string;
+  /** The color of he dark background */
   darkBackgroundColor?: string;
+  /** The border of the toggle when in light mode */
   lightBorderColor?: string;
+  /** the border of the toggle when in dark mode */
   darkBorderColor?: string;
   buttonComponent?:
     | string

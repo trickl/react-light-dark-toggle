@@ -4,7 +4,8 @@
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:import/errors",
-    "plugin:import/warnings"
+    "plugin:import/warnings",
+    "plugin:storybook/recommended"
   ],
   "plugins": [
     "jsx-a11y",
@@ -22,14 +23,22 @@
     "jest": true
   },
   "rules": {
-    "prettier/prettier": ["error", { "singleQuote": true }],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ],
     "@typescript-eslint/explicit-function-return-type": "off",
     "simple-import-sort/exports": "error",
     "simple-import-sort/imports": "error"
   },
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx"],
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
       "rules": {
         "tsc/config": [
           1,
@@ -48,13 +57,27 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["components", "./src/components"],
-          ["assets", "./src/assets"]
+          [
+            "components",
+            "./src/components"
+          ],
+          [
+            "assets",
+            "./src/assets"
+          ]
         ],
-        "extensions": [".ts", ".js", ".tsx", ".json"]
+        "extensions": [
+          ".ts",
+          ".js",
+          ".tsx",
+          ".json"
+        ]
       }
     },
-    "import/ignore": ["node_modules", ".svg$"]
+    "import/ignore": [
+      "node_modules",
+      ".svg$"
+    ]
   },
   "parser": "@typescript-eslint/parser"
 }

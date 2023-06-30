@@ -52,17 +52,29 @@ const StyledIconContainer = styled(MovableIconContainer)(
 export interface LightDarkToggleProps
   extends Omit<HTMLProps<HTMLButtonElement>, 'as' | 'color'>,
     LightDarkButtonOwnProps {
+  /** The component representing the light mode (sun) icon */
   sunIconComponent?: FunctionComponent<Record<string, never>>;
+  /** The component representing the dark mode (moon) icon */
   moonIconComponent?: FunctionComponent<Record<string, never>>;
+  /** The transform to apply when showing the sun icon */
   showSunTransform?: string;
+  /** The transform to apply when hiding the sun icon */
   hideSunTransform?: string;
+  /** The transform to apply when showing the moon icon */
   showMoonTransform?: string;
+  /** The transform to apply when hiding the moon icon */
   hideMoonTransform?: string;
+  /** The filter to apply when showing the sun icon */
   showSunFilter?: string;
+  /** The filter to apply when hiding the sun icon */
   hideSunFilter?: string;
+  /** The filter to apply when showing the moon icon */
   showMoonFilter?: string;
+  /** The filter to apply when hiding the moon icon */
   hideMoonFilter?: string;
+  /** How long transitions should take (in ms) */
   transitionDuration?: string;
+  /** The action to apply on clicking the toggle */
   onToggle?: (isLight: boolean) => void;
 }
 
@@ -87,7 +99,7 @@ export const LightDarkToggle: FunctionComponent<LightDarkToggleProps> = ({
   hideMoonFilter = '',
   transitionDuration = '750ms',
   ...otherProps
-}) => {
+}: LightDarkToggleProps) => {
   const handleClick = useCallback(
     () => onToggle?.(!isLight),
     [isLight, onToggle]
